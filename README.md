@@ -14,6 +14,12 @@ pip install -r requirements.txt
 
 The [main](main.py) file contains the main part of the code. Running this script will generate the graphs.
 
+On line 7, the file must be selected. Preferably, save the document in the [Data](Data) folder and extract from there.
+
+```
+total_data = pd.read_csv("Data/data_01_06_2021.csv", delimiter=",")
+```
+
 On line 14, the number of sample points is determined:
 
 ```
