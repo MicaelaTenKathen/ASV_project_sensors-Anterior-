@@ -41,3 +41,4 @@ std_sensors = ['std_temp%s', 'std_ph%s', 'std_do%s', 'std_cond%s', 'std_orp%s'] 
 
 
 To plot all the data of the csv file, [All data](Data_scripts/all_data.py) can be used.
+
