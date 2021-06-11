@@ -2,41 +2,41 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def comparison(data, i):
+def comparison(data, i, num_points):
     width = 0.2
-    x = np.array([1, 2, 3, 4, 5, 6, 7])
+    x = np.arange(1, num_points, 1)
 
     if i == 0:
         fig, ax = plt.subplots(1, 1, figsize=(8, 4))
-        fig.suptitle("Temperature")
-        ax.bar(x, data["MEAN"][0], width, color='b', yerr=data["STD"][0], label='Temperature', alpha=0.6)
-        ax.set_xlabel("Number of sample")
-        ax.set_ylabel("Temp [ºC]")
+        fig.suptitle("Temperatura")
+        ax.bar(x, data["MEAN"], width, color='b', yerr=data["STD"], label='Temperatura', alpha=0.6)
+        ax.set_xlabel("Punto de muestreo")
+        ax.set_ylabel("ºC")
 
     elif i == 1:
         fig, ax = plt.subplots(1, 1, figsize=(8, 4))
         fig.suptitle("pH")
-        ax.bar(x, data["MEAN"][1], width, color='c', yerr=data["STD"][1], label='Temperature', alpha=0.9)
-        ax.set_xlabel("Number of sample")
-        ax.set_ylabel("pH [mV]")
+        ax.bar(x, data["MEAN"], width, color='c', yerr=data["STD"], label='pH', alpha=0.9)
+        ax.set_xlabel("Punto de muestreo")
+        ax.set_ylabel("mV")
 
     elif i == 2:
         fig, ax = plt.subplots(1, 1, figsize=(8, 4))
         fig.suptitle("DO")
-        ax.bar(x, data["MEAN"][2], width, color='y', yerr=data["STD"][2], label='Temperature', alpha=0.7)
-        ax.set_xlabel("Number of sample")
-        ax.set_ylabel("DO [mg/L]")
+        ax.bar(x, data["MEAN"], width, color='y', yerr=data["STD"], label='DO', alpha=0.7)
+        ax.set_xlabel("Punto de muestreo")
+        ax.set_ylabel("mg/L")
 
     elif i == 3:
         fig, ax = plt.subplots(1, 1, figsize=(8, 4))
-        fig.suptitle("Conductivity")
-        ax.bar(x, data["MEAN"][3], width, color='r', yerr=data["STD"][3], label='Temperature', alpha=0.6)
-        ax.set_xlabel("Number of sample")
-        ax.set_ylabel("Cond [us/cm]")
+        fig.suptitle("Conductividad")
+        ax.bar(x, data["MEAN"], width, color='r', yerr=data["STD"], label='Conductividad', alpha=0.6)
+        ax.set_xlabel("Punto de muestreo")
+        ax.set_ylabel("us/cm")
 
     elif i == 4:
         fig, ax = plt.subplots(1, 1, figsize=(8, 4))
         fig.suptitle("ORP")
-        ax.bar(x, data["MEAN"][4], width, color='g', yerr=data["STD"][4], label='Temperature', alpha=0.7)
-        ax.set_xlabel("Number of sample")
-        ax.set_ylabel("ORP [mV]")
+        ax.bar(x, data["MEAN"], width, color='g', yerr=data["STD"], label='ORP', alpha=0.7)
+        ax.set_xlabel("Punto de muestreo")
+        ax.set_ylabel("mV")

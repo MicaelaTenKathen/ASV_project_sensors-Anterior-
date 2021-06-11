@@ -18,6 +18,9 @@ def data_collec(total_data, init, sensors, k):
                     data.append(total_data.loc[init, sensors[k]])
                     init += 1
                 else:
+                    if 390 < init < 430:
+                        data.append(total_data.loc[init, sensors[k]])
+                        init += 1
                     if init > 433:
                         data.append(total_data.loc[init, sensors[k]])
                         init += 1
