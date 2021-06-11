@@ -1,11 +1,12 @@
 import pandas as pd
 from Data_scripts.data_collected import data_collec
 from Data_scripts.limits import *
-from Data_scripts.mean_std import *
+from Data_scripts.mean_std import mean
 from Plots.sensors import comparison
 from Plots.plot import *
 
-total_data = pd.read_csv("Data/data_01_06_2021.csv", delimiter=",")
+total_data = pd.read_csv(r'C:\Users\mcjara\OneDrive - Universidad Loyola Andalucía\Documentos\Proyecto '
+                         r'drones\ASV_project\Data\data_01_06_2021.csv', delimiter=",")
 
 total_data["DATE"] = pd.to_datetime(total_data["DATE"])
 total_sample = np.copy(total_data["SAMPLE_NUM"])
@@ -23,7 +24,6 @@ std_sensors = ['std_temp%s', 'std_ph%s', 'std_do%s', 'std_cond%s', 'std_orp%s'] 
 
 
 for k in range(len(sensors)):
-     init = 0
      for j in range(len(n_data)):
           globals()[name_sensors[k] % n_data[j]], init = data_collec(total_data, init, sensors, k)
 
