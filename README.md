@@ -18,6 +18,8 @@ First, the quotes must be removed from the csv file data. One option is to use P
 (Get-Content C:\fso\UsersConsolidated.csv) | % {$_ -replace '"', ''} | out-file -FilePath C:\fso\UsersConsolidated.csv -Force -Encoding ascii
 ```
 
+where ```C:\fso\UsersConsolidated.csv``` corresponds to the path of the csv file.
+
 For more information, go to [this link](https://devblogs.microsoft.com/scripting/remove-unwanted-quotation-marks-from-csv-files-by-using-powershell/)
 
 The [main](main.py) file contains the main part of the code. Running this script will generate the graphs.
