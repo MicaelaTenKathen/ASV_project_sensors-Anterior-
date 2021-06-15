@@ -12,6 +12,14 @@ pip install -r requirements.txt
 
 ## Use
 
+First, the quotes must be removed from the csv file data. One option is to use Powershell. Copy the following command line and paste into Powershell:
+
+```
+(Get-Content C:\fso\UsersConsolidated.csv) | % {$_ -replace '"', ''} | out-file -FilePath C:\fso\UsersConsolidated.csv -Force -Encoding ascii
+```
+
+For more information, go to [this link](https://devblogs.microsoft.com/scripting/remove-unwanted-quotation-marks-from-csv-files-by-using-powershell/)
+
 The [main](main.py) file contains the main part of the code. Running this script will generate the graphs.
 
 
