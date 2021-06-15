@@ -48,7 +48,7 @@ def plots(data, time, num, min_sensors, max_sensors):
 def histo(data, num, min_sensors, max_sensors, shape_sensors):
     stable_data = data
     if num == 1:
-        sa = 10
+        sa = 4
     else:
         sa = 3
 
