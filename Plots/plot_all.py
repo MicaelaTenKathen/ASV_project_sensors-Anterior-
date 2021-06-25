@@ -11,7 +11,7 @@ def plots_all(data, time):
     plt.subplot(511)
     plt.plot(time, data["TEMP"])
     plt.xlabel("tiempo [s]")
-    plt.ylabel("Temp ºC")
+    plt.ylabel("Temp [ºC]")
 
     plt.subplot(512)
     plt.plot(time, data["PH"])
@@ -21,7 +21,7 @@ def plots_all(data, time):
     plt.subplot(513)
     plt.plot(time, data["DO"])
     plt.xlabel("tiempo [s]")
-    plt.ylabel("DO [mg/L]")
+    plt.ylabel("DO [%]")
 
     plt.subplot(514)
     plt.plot(time, data["COND"])
@@ -42,15 +42,15 @@ def plots_all(data, time):
 def histo_all(data, num):
     stable_data = data
     if num == 1:
-        sa = 10
+        sa = 4
     else:
-        sa = 3
+        sa = 4
 
     plt.figure(figsize=(8, 14))
 
     plt.subplot(511)
     plt.hist(stable_data["TEMP"][sa:], bins=10)
-    plt.xlabel("Temp ºC")
+    plt.xlabel("Temp [ºC]")
 
     plt.subplot(512)
     plt.hist(stable_data["PH"][sa:], bins=10)
@@ -58,7 +58,7 @@ def histo_all(data, num):
 
     plt.subplot(513)
     plt.hist(stable_data["DO"][sa:], bins=10)
-    plt.xlabel("DO [mg/L]")
+    plt.xlabel("DO [%]")
 
     plt.subplot(514)
     plt.hist(stable_data["COND"][sa:], bins=10)

@@ -8,4 +8,5 @@ def mean(array, num):
         sa = 3
     mean = np.mean(array[sa:])
     std = np.std(array[sa:])
-    return mean, std
+    shape = array.shape[0]
+    return mean, std, shape

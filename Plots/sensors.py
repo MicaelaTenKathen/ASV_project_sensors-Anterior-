@@ -25,7 +25,7 @@ def comparison(data, i, num_points):
         fig.suptitle("DO")
         ax.bar(x, data["MEAN"], width, color='y', yerr=data["STD"], label='DO', alpha=0.7)
         ax.set_xlabel("Punto de muestreo")
-        ax.set_ylabel("mg/L")
+        ax.set_ylabel("%")
 
     elif i == 3:
         fig, ax = plt.subplots(1, 1, figsize=(8, 4))
